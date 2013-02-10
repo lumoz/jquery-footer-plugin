@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+			body {
+				margin: 0;
+				font-size: 16px;
+				font-family: Tahoma, Arial, sans-serif;
+			}
+			div {
+				text-align: center;
+				width: 900px;
+				margin: 0 auto;
+				padding: 10px 0;
+			}
+			#header {
+				background: red;
+			}
+			#content {
+				background: yellow;
+				height: 400px;
+			}
+			#footer {
+				background: green;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="./jquery.footer.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#footer').footer();
+		});
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			Header
+		</div>
+		<div id="content">
+			Content
+		</div>
+		<div id="footer">
+			Footer
+		</div>
+	</body>
+</html>
