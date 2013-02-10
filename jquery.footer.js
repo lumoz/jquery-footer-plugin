@@ -1,6 +1,6 @@
 /**
- * jQuery Plugin to put the footer in bottom if the window is higher
- * than the size of the site.
+ * jQuery Plugin to brings the footer down if the window is higher
+ * than the size of the page layout.
  * @author	Luigi Mozzillo <luigi@innato.it>
  * @link	http://innato.it
  * @version 1.0
@@ -29,6 +29,8 @@
 		this.init(element, options)
 	}
 
+	// --------------------------------------------------------------------------
+
 	Footer.prototype = {
 
 		/**
@@ -51,6 +53,8 @@
 			this._behaviours();
 		}
 
+		// --------------------------------------------------------------------------
+
 		/**
 		 * Behaviours
 		 */
@@ -61,6 +65,8 @@
 				// Do it again every time you resize the window
 				$(window).resize(function() { $.proxy(that._adjust(), that);  });
 		}
+
+		// --------------------------------------------------------------------------
 
 		/**
 		 * Brings the footer down
@@ -81,6 +87,8 @@
 			}
 		}
 	}
+
+	// --------------------------------------------------------------------------
 
 	$.fn.footer = function (option) {
 		return this.each(function () {
