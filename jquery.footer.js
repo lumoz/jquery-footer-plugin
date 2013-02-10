@@ -60,10 +60,10 @@
 		 */
 		, _behaviours: function() {
 			var that = this;
-			this._adjust();	// Brings the footer down
+			this._brings();	// Brings the footer down
 			if (this.options.on_resizing === true)
 				// Do it again every time you resize the window
-				$(window).resize(function() { $.proxy(that._adjust(), that);  });
+				$(window).resize(function() { $.proxy(that._brings(), that);  });
 		}
 
 		// --------------------------------------------------------------------------
@@ -71,7 +71,7 @@
 		/**
 		 * Brings the footer down
 		 */
-		, _adjust: function() {
+		, _brings: function() {
 			var   that = this
 				, footer_height	= this.$element.innerHeight()
 				, footer_margin	= parseInt(this.$element.css('marginTop'))
